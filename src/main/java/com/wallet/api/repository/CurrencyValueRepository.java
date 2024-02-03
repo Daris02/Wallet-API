@@ -22,10 +22,10 @@ public class CurrencyValueRepository extends AutoCrud<CurrencyValue, Integer> {
         try {
             return new CurrencyValue(
                 resultSet.getInt("id"),
-                resultSet.getInt("currency_source"),
-                resultSet.getInt("currency_destination"),
+                resultSet.getInt("currencysource"),
+                resultSet.getInt("currencydestination"),
                 resultSet.getDouble("amount"),
-                resultSet.getTimestamp("date_effect").toLocalDateTime()
+                resultSet.getTimestamp("dateeffect").toLocalDateTime()
             );
         } catch (SQLException e) {
             e.printStackTrace();
